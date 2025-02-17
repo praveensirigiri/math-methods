@@ -1,0 +1,37 @@
+<!-- 1) wap to find min or max first in a given input
+a=28345
+output: min is first
+
+a=8737
+output: max is first
+
+write a function to generate random otp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Check output in the console</p>
+    <script>
+        function findMinMaxFirst(input) {
+            let digits = input.toString().split('');
+            let minDigit = Math.min(...digits);
+            let maxDigit = Math.max(...digits);
+
+            if (digits[0] == minDigit) {
+                console.log("min is first");
+            } else if (digits[0] == maxDigit) {
+                console.log("max is first");
+            } else {
+                console.log("Neither min nor max is first");
+            }
+        }
+
+        findMinMaxFirst(28345); 
+        findMinMaxFirst(8737);  
+    </script>
+</body>
+</html>
